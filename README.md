@@ -42,8 +42,8 @@ This library is designed for Kotlin Multiplatform projects and supports the foll
 Add the `datastoreutils` modules to your `build.gradle.kts` file.
 
 ```kotlin
-include("uk.dominikdias.datastoreutils:core")
-include("uk.dominikdias.datastoreutils:compose") // If you need Compose integrations
+include("uk.dominikdias.datastoreutils:core:latest")
+include("uk.dominikdias.datastoreutils:compose:latest") // If you need Compose integrations
 ```
 
 ## Usage
