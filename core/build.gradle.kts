@@ -3,11 +3,9 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
-    `maven-publish`
+    alias(libs.plugins.mavenPublish)
+    signing
 }
-
-group = "uk.dominikdias.datastoreutils"
-version = "0.0.1"
 
 kotlin {
     androidTarget {
@@ -49,8 +47,6 @@ android {
     }
 }
 
-publishing {
-    repositories {
-        mavenLocal()
-    }
+signing {
+    isRequired = gradle.taskGraph.allTasks.any { it !is PublishToMavenLocal }
 }
