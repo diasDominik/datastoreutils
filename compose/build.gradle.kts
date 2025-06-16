@@ -6,7 +6,6 @@ plugins {
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.mavenPublish)
-    signing
 }
 
 kotlin {
@@ -49,11 +48,5 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
-    }
-}
-
-if (project.hasProperty("signing.enabled")) {
-    signing {
-        sign(publishing.publications)
     }
 }
