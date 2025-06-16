@@ -47,6 +47,8 @@ android {
     }
 }
 
-signing {
-    isRequired = gradle.taskGraph.allTasks.any { it !is PublishToMavenLocal }
+if (project.hasProperty("signing.enabled")) {
+    signing {
+        sign(publishing.publications)
+    }
 }
