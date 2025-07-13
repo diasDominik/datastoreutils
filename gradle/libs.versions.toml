@@ -1,10 +1,10 @@
 [versions]
-agp = "8.10.1"
+agp = "8.11.1"
 datastorePreferences = "1.1.7"
-kotlin = "2.1.21"
-compose-plugin = "1.8.1"
-lifecycleRuntimeComposeVersion = "2.9.0"
-mavenPublish = "0.32.0"
+kotlin = "2.2.0"
+compose-plugin = "1.8.2"
+lifecycleRuntimeComposeVersion = "2.9.1"
+mavenPublish = "0.33.0"
 
 [libraries]
 datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
